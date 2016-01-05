@@ -16,6 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("HomePageViewController") as! HomePageViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        UINavigationBar.appearance().backgroundColor = UIColor.blueColor()
+        UINavigationBar.appearance().alpha = 1.0
+        // UINavigationBar.appearance().translucent = false
+        
+        
+        leftViewController.mainViewController = nvc
+        
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.rootViewController = slideMenuController
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
