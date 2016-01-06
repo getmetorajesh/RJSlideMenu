@@ -20,6 +20,7 @@
 		02CAE2731C3C4C540070D594 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CAE2721C3C4C540070D594 /* LeftMenuViewController.swift */; };
 		02CAE2751C3C4D3E0070D594 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CAE2741C3C4D3E0070D594 /* OtherViewController.swift */; };
 		02CAE2771C3C50390070D594 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CAE2761C3C50390070D594 /* UIViewController.swift */; };
+		02CAE2791C3D365D0070D594 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CAE2781C3D365D0070D594 /* LoginVC.swift */; };
 		DC5CC3E7D81E4B3629FF2D31 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA366D3161E9CC2AF8E92509 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		02CAE2721C3C4C540070D594 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		02CAE2741C3C4D3E0070D594 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		02CAE2761C3C50390070D594 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		02CAE2781C3D365D0070D594 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		11F69E7DCBB229AC064FA4A5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA366D3161E9CC2AF8E92509 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83B5A9356F41C4C18B01F88 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				02CAE2701C3C4C410070D594 /* HomePageViewController.swift */,
 				02CAE2721C3C4C540070D594 /* LeftMenuViewController.swift */,
 				02CAE2741C3C4D3E0070D594 /* OtherViewController.swift */,
+				02CAE2781C3D365D0070D594 /* LoginVC.swift */,
 			);
 			path = RJSlideMenu;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				02CAE2751C3C4D3E0070D594 /* OtherViewController.swift in Sources */,
 				02CAE2731C3C4C540070D594 /* LeftMenuViewController.swift in Sources */,
 				02CAE24D1C3C4A820070D594 /* ViewController.swift in Sources */,
+				02CAE2791C3D365D0070D594 /* LoginVC.swift in Sources */,
 				02CAE2711C3C4C410070D594 /* HomePageViewController.swift in Sources */,
 				02CAE2771C3C50390070D594 /* UIViewController.swift in Sources */,
 				02CAE24B1C3C4A820070D594 /* AppDelegate.swift in Sources */,

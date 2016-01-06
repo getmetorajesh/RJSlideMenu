@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+       // self.createSlideMenu()
+        return true
+    }
+    
+  //  func createSlideMenu() {
+    func createSlideMenu() -> SlideMenuController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //UINavigationBar.appearance().tintColor = UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+       UINavigationBar.appearance().barTintColor = UIColor.redColor() //UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+        //UINavigationBar. = // UIColor(red: 0.05, green: 0.47, blue: 0.91, alpha: 1.0)
+        
+       UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+       UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
         
         let mainViewController = storyboard.instantiateViewControllerWithIdentifier("HomePageViewController") as! HomePageViewController
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
+         let rightViewController = storyboard.instantiateViewControllerWithIdentifier("OtherViewController") as! OtherViewController
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         UINavigationBar.appearance().backgroundColor = UIColor.blueColor()
@@ -29,14 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         leftViewController.mainViewController = nvc
         
-        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController,rightMenuViewController: rightViewController)
         slideMenuController.automaticallyAdjustsScrollViewInsets = true
         self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
         self.window?.rootViewController = slideMenuController
         self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
-        self.window?.makeKeyAndVisible()
-
-        return true
+        //self.window?.makeKeyAndVisible()
+        return slideMenuController
     }
 
     func applicationWillResignActive(application: UIApplication) {
